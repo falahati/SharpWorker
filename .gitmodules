@@ -1,0 +1,4 @@
+[submodule "LiteDB"]
+	path = LiteDB
+	url = git@github.com:falahati/LiteDB.git
+	branch = local-dev

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net462</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <Version>1.0.0</Version>
+    <Company>Soroush Falahati (falahati.net)</Company>
+    <Description></Description>
+    <Authors>Soroush Falahati</Authors>
+    <Copyright>Copyright © Soroush Falahati 2018</Copyright>
+    <Platforms>AnyCPU</Platforms>
+    <Product>SharpWorker</Product>
+    <Title>SharpWorker.NetCoordinator</Title>
+    <PlatformTarget>AnyCPU</PlatformTarget>    
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <BumpRevision>True</BumpRevision>
+    <BumpResetLabel>dev</BumpResetLabel>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <OutputPath>..\Release</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference PrivateAssets="all" Include="MSBump" Version="2.3.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="DotNetZip" Version="1.12.0" />
+    <PackageReference Include="JWT" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.2.7" />
+    <PackageReference Include="NSwag.Annotations" Version="12.0.5" />
+    <PackageReference Include="NSwag.AspNet.Owin" Version="12.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="NJsonSchema">
+      <HintPath>..\packages\NJsonSchema.9.12.5\lib\net45\NJsonSchema.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpWorker\SharpWorker.csproj" />
+  </ItemGroup>
+</Project>
