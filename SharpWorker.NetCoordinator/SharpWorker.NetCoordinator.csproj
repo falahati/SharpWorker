@@ -15,13 +15,13 @@
     <PlatformTarget>AnyCPU</PlatformTarget>    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\Debug</OutputPath>
+    <OutputPath>$(SolutionDir)\Debug</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <BumpRevision>True</BumpRevision>
     <BumpResetLabel>dev</BumpResetLabel>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <OutputPath>..\Release</OutputPath>
+    <OutputPath>$(SolutionDir)\Release</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference PrivateAssets="all" Include="MSBump" Version="2.3.2">
